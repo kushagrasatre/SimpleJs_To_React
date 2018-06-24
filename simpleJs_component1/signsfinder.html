@@ -1,0 +1,81 @@
+<html>
+	<header>
+	<script src="js/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/finder.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	</header>
+	<body>
+	<div class="root-container">
+	<!-- 1 -->
+	<h1 class="heading-cmpo">ZODIAC SIGNS FINDER</h1>
+	<!-- 1 end -->
+	
+	<div class="app-container">
+	<!-- 2 -->
+	<div class="navbar-form navbar-left"> 
+	
+	<div class="form-group"> 
+	<input class="form-control" placeholder="Search"> 
+	</div> 
+	
+	<button type="button" class="btn btn-default">Submit</button> 
+	</div>
+	<!-- 2 end -->
+	
+	
+	<!-- 3 -->
+	<div class="result">
+	<div class="row zodiac-img-title-container">
+	<div class="col-xs-12 col-sm-6 zodiac-img-container">
+	<img src="images/zodiac_circle.jpg" class="img-responsive"/>
+	</div>
+	<div class="col-xs-12 col-sm-6 zodiac-title-container">
+	<h1 class="result-title"></h1>
+	</div>
+	
+	</div>
+	</div>
+	
+	</div>
+	</div>
+	<script>
+	$(document).ready(
+		function(){
+	$(".form-control").change(
+	function(){
+		input=$(this).val();
+		$(".result").show();
+		$(".result-title").html(findemyzodiac());
+	}
+	);
+	
+	
+		}
+	);
+	
+	var alpha_word_array={Aries:["Choo", "Che", "Cho", "Laa", "Lee", "Loo", "Le", "Lo", "A"],Taurus:["I", "U", "E", "O", "Wa", "Wee", "oo", "We", "Wo"],Gemini:["Kaa", "Kee", "Koo", "Gh", "Ang", "Chh", "Ke", "Ko", "Haa"],Cancer:["Hee", "Hoo", "He", "Daa", "Dee", "Doo", "De", "Do"],Leo:["Maa", "Mee", "Moo", "Me", "Mo", "Taa", "Tee","Too", "Te"],Virgo:["To", "Paa", "Pee", "Poo", "Sh", "Th", "Pe", "Po"],Libra:["Raa", "Ree", "Roo", "Re", "Ro", "Taa", "Tee", "Too", "Te"],Scorpio:["To", "Naa", "Nee", "Noo", "Ne", "No", "Yaa", "Yee", "Yu"],Saggitarius:["Ye", "Yo", "Bhaa", "Bhee", "Bhoo", "Dhaa", "Phaa", "Taa", "Bhe"],Capricorn:["Bho", "Jaa", "Jee", "Khee", "Khoo", "Khe", "Kho", "Gaa", "Gee"],Aquarius:["Goo", "Ge", "Go", "Saa", "See", "Soo", "Se", "So", "Da"],Pisces:["Dee", "Doo", "Th", "Jh", "Yan", "De", "Do", "Chaa", "Chee"]};
+	/*var alpha_word_array={Aries:new Array("Choo", "Che", "Cho", "Laa", "Lee", "Loo", "Le", "Lo", "A"),Taurus:new Array("I", "U", "E", "O", "Wa", "Wee", "oo", "We", "Wo"),Gemini:new Array("Kaa", "Kee", "Koo", "Gh", "Ang", "Chh", "Ke", "Ko", "Haa"),Cancer:new Array("Hee", "Hoo", "He", "Daa", "Dee", "Doo", "De", "Do"),Leo:new Array("Maa", "Mee", "Moo", "Me", "Mo", "Taa", "Tee","Too", "Te"),Virgo:new Array("To", "Paa", "Pee", "Poo", "Sh", "Th", "Pe", "Po"),Libra:new Array("Raa", "Ree", "Roo", "Re", "Ro", "Taa", "Tee", "Too", "Te"),Scorpio:new Array("To", "Naa", "Nee", "Noo", "Ne", "No", "Yaa", "Yee", "Yu"),Saggitarius:new Array("Ye", "Yo", "Bhaa", "Bhee", "Bhoo", "Dhaa", "Phaa", "Taa", "Bhe"),Capricorn:new Array("Bho", "Jaa", "Jee", "Khee", "Khoo", "Khe", "Kho", "Gaa", "Gee"),Aquarius:new Array("Goo", "Ge", "Go", "Saa", "See", "Soo", "Se", "So", "Da"),Pisces:new Array("Dee", "Doo", "Th", "Jh", "Yan", "De", "Do", "Chaa", "Chee")};*/
+	
+	//var obj={one:Array(1,2,3),two:Array(4,5,6)};
+	
+	var input="Kushagra";
+	function findemyzodiac(){
+	for(var i in alpha_word_array){
+		//console.log(alpha_word_array[i].length);
+		//if(obj[i])
+		for(var k=0;k<alpha_word_array[i].length;k++){
+			//if(alpha_word_array[i][k]==input){
+			//console.log(String(alpha_word_array[i][k]).indexOf("K"));
+			if(String(alpha_word_array[i][k]).toLowerCase().search(input.toLowerCase().toString()[0])>=0){
+			console.log(alpha_word_array[i][k]);	
+			//console.log([i][0]);
+				return [i][0];
+			}
+		}
+	}
+	};
+	//console.log();
+	//console.log(alpha_word_array.length);
+	</script>
+	</body>
+</html>

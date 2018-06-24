@@ -26,3 +26,45 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+.result{
+	padding:10px 0;
+	clear: both;
+	display:none;
+	    margin: 15px;
+    padding: 5px;
+}
+
+.heading-cmpo{
+	TEXT-ALIGN:CENTER;
+}
+h1.result-title {
+    font-size: 5em;
+    color: #ea4600;
+}
+
+.zodiac-img-title-container{
+	display:table;
+}
+
+.zodiac-img-title-container .zodiac-img-container,
+.zodiac-img-title-container .zodiac-title-container{
+	display:table-cell;
+	float:none!important;
+	text-align:center;
+	vertical-align:middle;
+}
+.navbar-form.navbar-left{
+	float:none!important;
+	text-align:center;
+	    margin: 10px 0;
+}
+input.form-control {
+    border-radius: 0;
+}
+.app-container {
+    padding: 20px;
+}
+
+

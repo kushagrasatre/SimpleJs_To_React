@@ -32,31 +32,25 @@ class App extends Component {
         }
     };
 
-    testHandler = (para)=>{
-        console.log(para, this);
-    }
-
-  render() {
+    render() {
         const {input} = this.state;
-    return (
-      <div className="App">
-            <div className="root-container">
-                <h1 className="heading-cmpo">ZODIAC SIGNS FINDER</h1>
-                <div className="app-container">
-                    <div className="navbar-form navbar-left">
-                        <div className="form-group"> 
-                            <input className="form-control" placeholder="Search" value={input} onChange={this.inputChangeHandler} />
-                        </div> 
-                        <button type="button" className="btn btn-default" onClick={this.findemyzodiac}>Submit</button>
-                        <button type="button" className="btn btn-default" onClick={()=>{
-                            this.testHandler('abc');
-                        }}>Test</button>
+        return (
+            <div className="App">
+                <div className="root-container">
+                    <h1 className="heading-cmpo">ZODIAC SIGNS FINDER</h1>
+                    <div className="app-container">
+                        <div className="navbar-form navbar-left">
+                            <div className="form-group"> 
+                                <input className="form-control" placeholder="Search" value={input} onChange={this.inputChangeHandler} />
+                            </div> 
+                            <button type="button" className="btn btn-default" onClick={this.findemyzodiac}>Submit</button>
+                            
+                        </div>
                     </div>
-                </div>
-                </div>
-      </div>
-    );
-  }
+                    </div>
+            </div>
+        );
+    }
 }
 
 export default App;
